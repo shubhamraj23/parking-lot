@@ -1,6 +1,11 @@
 #include <iostream>
 #include "ParkingLot.h"
 
+#define HANDICAPPED_SPOTS_PERCENT 0.1
+#define COMPACT_SPOTS_PERCENT 0.4
+#define LARGE_SPOTS_PERCENT 0.3
+#define MOTORCYCLE_SPOTS_PERCENT 0.2
+
 int main() {
   std::cout << "This application is a simulation of a parking lot." << std::endl;
   

@@ -11,5 +11,6 @@ add_executable(
   EntryTerminal.cpp
   ExitTerminal.cpp
   ParkingLot.cpp
+  ParkingSpot.cpp
   Terminal.cpp
 )

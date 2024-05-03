@@ -31,6 +31,11 @@ int main() {
   }
   while (spots < 10 || spots > 1000);
 
+  // Create the parking lot.
+  ParkingLot parkingLot = ParkingLot();
+  for (int i = 0; i < entrances; i++) parkingLot.addNewEntryTerminal();
+  for (int i = 0; i < exits; i++) parkingLot.addNewExitTerminal();
+
 
   return 0;
 }

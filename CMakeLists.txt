@@ -8,9 +8,15 @@ project(parking-lot)
 add_executable(
   parking-lot
   parking.cpp
+  CompactParkingSpot.cpp
   EntryTerminal.cpp
   ExitTerminal.cpp
+  HandicappedParkingSpot.cpp
+  LargeParkingSpot.cpp
+  MotorcycleParkingSpot.cpp
   ParkingLot.cpp
+  ParkingLotBuilder.cpp
   ParkingSpot.cpp
+  SetComparator.cpp
   Terminal.cpp
 )

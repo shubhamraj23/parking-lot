@@ -1,10 +1,6 @@
 #include <iostream>
 #include "ParkingLot.h"
-
-#define HANDICAPPED_SPOTS_PERCENT 0.1
-#define COMPACT_SPOTS_PERCENT 0.4
-#define LARGE_SPOTS_PERCENT 0.3
-#define MOTORCYCLE_SPOTS_PERCENT 0.2
+#include "ParkingLotBuilder.h"
 
 int main() {
   std::cout << "This application is a simulation of a parking lot." << std::endl;
@@ -36,11 +32,8 @@ int main() {
   }
   while (spots < 10 || spots > 1000);
 
-  // Create the parking lot.
-  ParkingLot parkingLot = ParkingLot();
-  for (int i = 0; i < entrances; i++) parkingLot.addNewEntryTerminal();
-  for (int i = 0; i < exits; i++) parkingLot.addNewExitTerminal();
-
+  // Create a new parking lot object.
+  ParkingLot parkinglot = ParkingLotBuilder::createParkingLot(entrances, exits, spots);
 
   return 0;
 }

@@ -1,17 +1,19 @@
 #ifndef PARKINGLOT_H
 #define PARKINGLOT_H
 
+#include <set>
+#include <vector>
 #include "EntryTerminal.h"
 #include "ExitTerminal.h"
 #include "ParkingSpot.h"
 #include "SetComparator.h"
-#include <set>
-#include <vector>
+#include "SpotAssignmentStrategy.h"
 
 class EntryTerminal;
 class ExitTerminal;
 class ParkingSpot;
 class SetComparator;
+class SpotAssignmentStrategy;
 
 class ParkingLot {
   private:
@@ -19,8 +21,7 @@ class ParkingLot {
     int numberOfExitTerminals;
     std::vector<EntryTerminal*> entryTerminalsList;
     std::vector<ExitTerminal*> exitTerminalsList;
-    SetComparator comparator;
-    std::vector< std::set<ParkingSpot*, SetComparator> > nearestSpotsList;
+    SpotAssignmentStrategy* strategy;
 
   public:
     ParkingLot();
@@ -32,10 +33,8 @@ class ParkingLot {
     std::vector<EntryTerminal*> getAllEntryTerminals();
     void addNewExitTerminal();
     std::vector<ExitTerminal*> getAllExitTerminals();
-    std::vector< std::set<ParkingSpot*, SetComparator> > getNearestSpotsList();
-    void createAndSetComparator();
-    void createSpotList();
-    void addParkingSpot(ParkingSpot* spot);
+    SpotAssignmentStrategy* getStrategy();
+    void addStrategy(SpotAssignmentStrategy* strategy);
 };
 
 #endif

@@ -14,9 +14,11 @@ add_executable(
   HandicappedParkingSpot.cpp
   LargeParkingSpot.cpp
   MotorcycleParkingSpot.cpp
+  NearestSpotAssignment.cpp
   ParkingLot.cpp
   ParkingLotBuilder.cpp
   ParkingSpot.cpp
+  ParkingTicket.cpp
   SetComparator.cpp
   Terminal.cpp
 )

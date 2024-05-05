@@ -50,33 +50,12 @@ std::vector<ExitTerminal*> ParkingLot::getAllExitTerminals() {
   return this->exitTerminalsList;
 }
 
-// Function to get the nearest spots list.
-std::vector< std::set<ParkingSpot*, SetComparator> > ParkingLot::getNearestSpotsList() {
-  return this->nearestSpotsList;
+// Function to return the strategy associated with the parking spot assignment.
+SpotAssignmentStrategy* ParkingLot::getStrategy() {
+  return this->strategy;
 }
 
-// Function to create the comparator object.
-void ParkingLot::createAndSetComparator() {
-  SetComparator comparator = SetComparator();
-  this->comparator = comparator;
-}
-
-// Function to resize the list containing parking spots.
-void ParkingLot::createSpotList() {
-  this->nearestSpotsList.resize(this->numberOfEntryTerminals);
-  this->createAndSetComparator();
-  for (int i = 0; i < this->numberOfEntryTerminals; i++) {
-    std::set<ParkingSpot*, SetComparator> newSet(this->comparator);
-    this->nearestSpotsList[i] = newSet;
-  }
-}
-
-// Function to add a new parking spot to the parking lot.
-void ParkingLot::addParkingSpot(ParkingSpot* spot) {
-  std::vector<EntryTerminal*> entryTerminals = this->entryTerminalsList;
-  for (int i = 0; i < this->numberOfEntryTerminals; i++) {
-    int terminalId = entryTerminals[i]->getTerminalId();
-    this->comparator.setEntranceTerminalId(terminalId);
-    this->nearestSpotsList[i].insert(spot);
-  }
+// Function to add strategy associated with the parking spot assignment.
+void ParkingLot::addStrategy(SpotAssignmentStrategy* strategy) {
+  this->strategy = strategy;
 }

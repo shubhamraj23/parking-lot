@@ -1,16 +1,25 @@
 #ifndef ENTRY_TERMINAL_H
 #define ENTRY_TERMINAL_H
 
-#include "Terminal.h" 
+#include <string>
+#include "ParkingTicket.h"
+#include "Spots.h"
+#include "SpotAssignmentStrategy.h"
+#include "Terminal.h"
 
+class ParkingTicket;
+class SpotAssignmentStrategy;
 class Terminal;
 
 class EntryTerminal : public Terminal {
   private:
-
+    SpotAssignmentStrategy* strategy;
 
   public:
     EntryTerminal();
+    SpotAssignmentStrategy* getStrategy();
+    void addStrategy(SpotAssignmentStrategy* strategy);
+    ParkingTicket* assignSpot(Spots type);
 };
 
 #endif

@@ -9,6 +9,7 @@ class CompactParkingSpot : public ParkingSpot {
 
   public:
     CompactParkingSpot();
+    virtual void blank() override;
 };
 
 #endif

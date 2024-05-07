@@ -13,6 +13,7 @@ class ParkingSpot {
     void setParkingSpotId();
     bool getReservedStatus();
     void flipReservedStatus();
+    virtual void blank() = 0;
 };
 
 #endif

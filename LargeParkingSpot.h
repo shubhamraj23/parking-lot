@@ -9,6 +9,7 @@ class LargeParkingSpot : public ParkingSpot {
 
   public:
     LargeParkingSpot();
+    virtual void blank() override;
 };
 
 #endif

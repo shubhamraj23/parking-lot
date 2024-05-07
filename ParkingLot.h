@@ -21,7 +21,6 @@ class ParkingLot {
     int numberOfExitTerminals;
     std::vector<EntryTerminal*> entryTerminalsList;
     std::vector<ExitTerminal*> exitTerminalsList;
-    SpotAssignmentStrategy* strategy;
 
   public:
     ParkingLot();
@@ -33,8 +32,6 @@ class ParkingLot {
     std::vector<EntryTerminal*> getAllEntryTerminals();
     void addNewExitTerminal();
     std::vector<ExitTerminal*> getAllExitTerminals();
-    SpotAssignmentStrategy* getStrategy();
-    void addStrategy(SpotAssignmentStrategy* strategy);
 };
 
 #endif

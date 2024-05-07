@@ -1,8 +1,9 @@
 #ifndef NEAREST_SPOT_ASSIGNMENT_H
 #define NEAREST_SPOT_ASSIGNMENT_H
 
-#include <vector>
 #include <set>
+#include <string>
+#include <vector>
 #include "ParkingSpot.h"
 #include "SetComparator.h"
 #include "SpotAssignmentStrategy.h"
@@ -21,7 +22,7 @@ class NearestSpotAssignment : public SpotAssignmentStrategy {
     NearestSpotAssignment();
     virtual void initializeStrategy(int entrances) override;
     virtual void addParkingSpot(ParkingSpot* spot, std::vector<EntryTerminal*> entryTerminals) override;
-    virtual ParkingTicket* assignSpot() override;
+    virtual ParkingTicket* assignSpot(int entranceId, Spots type) override;
 };
 
 #endif

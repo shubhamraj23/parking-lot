@@ -9,6 +9,7 @@ class MotorcycleParkingSpot : public ParkingSpot {
 
   public:
     MotorcycleParkingSpot();
+    virtual void blank() override;
 };
 
 #endif

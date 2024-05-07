@@ -1,6 +1,15 @@
 #include <iostream>
 #include "ParkingLot.h"
 #include "ParkingLotBuilder.h"
+#include "CompactParkingSpot.h"
+#include "HandicappedParkingSpot.h"
+#include "LargeParkingSpot.h"
+#include "MotorcycleParkingSpot.h"
+
+class CompactParkingSpot;
+class HandicappedParkingSpot;
+class LargeParkingSpot;
+class MotorcycleParkingSpot;
 
 int main() {
   std::cout << "This application is a simulation of a parking lot." << std::endl;
@@ -34,6 +43,9 @@ int main() {
 
   // Create a new parking lot object.
   ParkingLot parkinglot = ParkingLotBuilder::createParkingLot(entrances, exits, spots);
+
+  ParkingTicket* ticket = parkinglot.getAllEntryTerminals()[0]->assignSpot(Spots::CompactParkingSpot);
+  std::cout << ticket->getParkingSpot()->getParkingSpotId() << std::endl;
 
   return 0;
 }

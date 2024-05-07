@@ -49,13 +49,3 @@ void ParkingLot::addNewExitTerminal() {
 std::vector<ExitTerminal*> ParkingLot::getAllExitTerminals() {
   return this->exitTerminalsList;
 }
-
-// Function to return the strategy associated with the parking spot assignment.
-SpotAssignmentStrategy* ParkingLot::getStrategy() {
-  return this->strategy;
-}
-
-// Function to add strategy associated with the parking spot assignment.
-void ParkingLot::addStrategy(SpotAssignmentStrategy* strategy) {
-  this->strategy = strategy;
-}

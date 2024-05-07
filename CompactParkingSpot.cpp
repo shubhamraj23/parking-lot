@@ -3,3 +3,7 @@
 CompactParkingSpot::CompactParkingSpot() {
   this->setParkingSpotId();
 }
+
+void CompactParkingSpot::blank() {
+
+}

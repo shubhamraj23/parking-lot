@@ -9,6 +9,7 @@ class HandicappedParkingSpot : public ParkingSpot {
 
   public:
     HandicappedParkingSpot();
+    virtual void blank() override;
 };
 
 #endif

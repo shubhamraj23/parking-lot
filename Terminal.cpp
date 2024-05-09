@@ -18,3 +18,13 @@ void Terminal::setTerminalId() {
   this->terminalId = Terminal::counter;
   Terminal::incrementCounter();
 }
+
+// Function to set the spot assignment strategy.
+void Terminal::setSpotAssignmentStrategy(SpotAssignmentStrategy* strategy) {
+  Terminal::strategy = strategy;
+}
+
+// Function to get the spot assignment strategy.
+SpotAssignmentStrategy* Terminal::getSpotAssignmentStrategy() {
+  return Terminal::strategy;
+}

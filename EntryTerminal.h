@@ -3,20 +3,14 @@
 
 #include <string>
 #include "ParkingTicket.h"
-#include "SpotAssignmentStrategy.h"
 #include "Terminal.h"
 
 class ParkingTicket;
-class SpotAssignmentStrategy;
 class Terminal;
 
 class EntryTerminal : public Terminal {
-  private:
-    SpotAssignmentStrategy* strategy;
-
   public:
     EntryTerminal();
-    void addStrategy(SpotAssignmentStrategy* strategy);
     ParkingTicket* assignSpot(std::string type);
 };
 

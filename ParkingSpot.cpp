@@ -1,7 +1,7 @@
 #include "ParkingSpot.h"
 
 // Assigning the static variable counter.
-int ParkingSpot::counter = 0;
+int ParkingSpot::counter = 1;
 
 // Function to increment the counter variable.
 void ParkingSpot::incrementCounter() {
@@ -37,4 +37,14 @@ std::string ParkingSpot::getSpotType() {
 // Function to set the spot type of the parking spot.
 void ParkingSpot::setSpotType(std::string spot) {
   this->spotType = spot;
+}
+
+// Function to set the parking rate associated with the spot.
+void ParkingSpot::setParkingRate(int rate) {
+  this->parkingRate = rate;
+}
+
+// Function to get the parking rate associated with the spot.
+int ParkingSpot::getParkingRate() {
+  return this->parkingRate;
 }

@@ -18,6 +18,7 @@ ParkingLot ParkingLotBuilder::createParkingLot(int entrances, int exits, int spo
   // Create strategy.
   SpotAssignmentStrategy* strategy = new NearestSpotAssignment();
   strategy->initializeStrategy(entrances);
+  Terminal::setSpotAssignmentStrategy(strategy);
 
   // Find the number of spots of each type.
   int handicappedSpots = HANDICAPPED_SPOTS_PERCENT * spots;
@@ -31,9 +32,6 @@ ParkingLot ParkingLotBuilder::createParkingLot(int entrances, int exits, int spo
   for (int i = 0; i < compactSpots; i++) strategy->addParkingSpot(new CompactParkingSpot(), entryTerminals);
   for (int i = 0; i < largeSpots; i++) strategy->addParkingSpot(new LargeParkingSpot(), entryTerminals);
   for (int i = 0; i < motorcycleSpots; i++) strategy->addParkingSpot(new MotorcycleParkingSpot(), entryTerminals);
-
-  // Assign the strategy to each entrance in the parking lot.
-  for (int i = 0; i < entryTerminals.size(); i++) entryTerminals[i]->addStrategy(strategy);
 
   return parkingLot;
 }

@@ -19,6 +19,7 @@ add_executable(
   ParkingLotBuilder.cpp
   ParkingSpot.cpp
   ParkingTicket.cpp
+  RandomSet.cpp
   SetComparator.cpp
   Terminal.cpp
 )

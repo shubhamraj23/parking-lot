@@ -44,7 +44,7 @@ int main() {
   // Create a new parking lot object.
   ParkingLot parkinglot = ParkingLotBuilder::createParkingLot(entrances, exits, spots);
 
-  ParkingTicket* ticket = parkinglot.getAllEntryTerminals()[0]->assignSpot(Spots::CompactParkingSpot);
+  ParkingTicket* ticket = parkinglot.getAllEntryTerminals()[0]->assignSpot("compact");
   std::cout << ticket->getParkingSpot()->getParkingSpotId() << std::endl;
 
   return 0;

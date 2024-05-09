@@ -28,3 +28,13 @@ bool ParkingSpot::getReservedStatus() {
 void ParkingSpot::flipReservedStatus() {
   this->reservedStatus = !(this->reservedStatus);
 }
+
+// Function to get the spot type of the parking spot.
+std::string ParkingSpot::getSpotType() {
+  return this->spotType;
+}
+
+// Function to set the spot type of the parking spot.
+void ParkingSpot::setSpotType(std::string spot) {
+  this->spotType = spot;
+}

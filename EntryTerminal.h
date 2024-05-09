@@ -3,7 +3,6 @@
 
 #include <string>
 #include "ParkingTicket.h"
-#include "Spots.h"
 #include "SpotAssignmentStrategy.h"
 #include "Terminal.h"
 
@@ -19,7 +18,7 @@ class EntryTerminal : public Terminal {
     EntryTerminal();
     SpotAssignmentStrategy* getStrategy();
     void addStrategy(SpotAssignmentStrategy* strategy);
-    ParkingTicket* assignSpot(Spots type);
+    ParkingTicket* assignSpot(std::string type);
 };
 
 #endif

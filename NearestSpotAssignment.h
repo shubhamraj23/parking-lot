@@ -22,7 +22,7 @@ class NearestSpotAssignment : public SpotAssignmentStrategy {
     NearestSpotAssignment();
     virtual void initializeStrategy(int entrances) override;
     virtual void addParkingSpot(ParkingSpot* spot, std::vector<EntryTerminal*> entryTerminals) override;
-    virtual ParkingTicket* assignSpot(int entranceId, Spots type) override;
+    virtual ParkingTicket* assignSpot(int entranceId, std::string type) override;
 };
 
 #endif

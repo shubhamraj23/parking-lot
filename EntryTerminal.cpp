@@ -16,6 +16,6 @@ void EntryTerminal::addStrategy(SpotAssignmentStrategy* strategy) {
 }
 
 // Function to assign a parking spot to the vehicle.
-ParkingTicket* EntryTerminal::assignSpot(Spots type) {
+ParkingTicket* EntryTerminal::assignSpot(std::string type) {
   return this->strategy->assignSpot(this->getTerminalId(), type);
 }

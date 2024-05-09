@@ -29,28 +29,10 @@ void NearestSpotAssignment::addParkingSpot(ParkingSpot* spot, std::vector<EntryT
 }
 
 // Strategy to assign the nearest parking spot.
-ParkingTicket* NearestSpotAssignment::assignSpot(int entranceId, Spots type) {
+ParkingTicket* NearestSpotAssignment::assignSpot(int entranceId, std::string type) {
   std::set<ParkingSpot*, SetComparator> currSet = this->nearestSpotsList[entranceId];
   auto spotId = currSet.begin();
-  while (spotId != currSet.end()) {
-    bool found = false;
-    switch(static_cast<int>(type)) {
-      case static_cast<int>(Spots::CompactParkingSpot):
-        if (dynamic_cast<CompactParkingSpot*>(*spotId) != NULL) found = true;
-        break;
-      case static_cast<int>(Spots::HandicappedParkingSpot):
-        if (dynamic_cast<HandicappedParkingSpot*>(*spotId) != NULL) found = true;
-        break;
-      case static_cast<int>(Spots::LargeParkingSpot):
-        if (dynamic_cast<LargeParkingSpot*>(*spotId) != NULL) found = true;
-        break;
-      case static_cast<int>(Spots::MotorcycleParkingSpot):
-        if (dynamic_cast<MotorcycleParkingSpot*>(*spotId) != NULL) found = true;
-        break;
-    }
-    if (found) break;
-    spotId++;
-  }
+  while (spotId != currSet.end() && (*spotId)->getSpotType() != type) spotId++;
   if (spotId == currSet.end()) return NULL;
   ParkingSpot* spot = *spotId;
   for (int i = 0; i < this->nearestSpotsList.size(); i++) this->nearestSpotsList[i].erase(spot);

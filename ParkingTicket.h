@@ -11,10 +11,10 @@ class ParkingTicket {
     int ticketId;
     ParkingSpot* spot;
     int issueTime;
+    static void incrementCounter();
 
   public:
     ParkingTicket(ParkingSpot* spot);
-    static void incrementCounter();
     int getTicketId();
     ParkingSpot* getParkingSpot();
     int getIssueTime();

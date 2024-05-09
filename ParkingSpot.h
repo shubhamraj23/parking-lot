@@ -9,18 +9,17 @@ class ParkingSpot {
     int parkingSpotId;
     bool reservedStatus;
     std::string spotType;
+    static void incrementCounter();
 
   protected:
     void setSpotType(std::string spot);
+    void setParkingSpotId();
 
   public:
-    static void incrementCounter();
     int getParkingSpotId();
-    void setParkingSpotId();
     bool getReservedStatus();
     void flipReservedStatus();
     std::string getSpotType();
-    virtual void blank() = 0;
 };
 
 #endif

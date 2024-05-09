@@ -6,19 +6,9 @@ ParkingLot::ParkingLot() {
   this->numberOfExitTerminals = 0;
 }
 
-// Function to get the number of entry terminals.
-int ParkingLot::getNumberOfEntryTerminals() {
-  return this->numberOfEntryTerminals;
-}
-  
 // Function to increment the number of entry terminals.
 void ParkingLot::incrementNumberOfEntryTerminals() {
   this->numberOfEntryTerminals++;
-}
-
-// Function to get the number of exit terminals.
-int ParkingLot::getNumberOfExitTerminals() {
-  return this->numberOfExitTerminals;
 }
   
 // Function to increment the number of exit terminals.

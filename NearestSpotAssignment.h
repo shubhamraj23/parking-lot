@@ -5,10 +5,12 @@
 #include <string>
 #include <vector>
 #include "ParkingSpot.h"
+#include "ParkingTicket.h"
 #include "SetComparator.h"
 #include "SpotAssignmentStrategy.h"
 
 class ParkingSpot;
+class ParkingTicket;
 class SetComparator;
 class SpotAssignmentStrategy;
 
@@ -16,7 +18,7 @@ class NearestSpotAssignment : public SpotAssignmentStrategy {
   private:
     SetComparator comparator;
     std::vector< std::set<ParkingSpot*, SetComparator> > nearestSpotsList;
-    void createAndSetComparator();
+    void createAndSetComparator(int entrances);
 
   public:
     NearestSpotAssignment();

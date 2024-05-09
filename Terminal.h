@@ -5,14 +5,13 @@ class Terminal {
   private:
     static int counter;
     int terminalId;
+    static void incrementCounter();
     
   protected:
-    Terminal();
+    void setTerminalId();
 
   public:
-    static void incrementCounter();
     int getTerminalId();
-    void setTerminalId();
 };
 
 #endif

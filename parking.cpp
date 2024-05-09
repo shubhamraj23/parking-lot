@@ -1,15 +1,7 @@
 #include <iostream>
 #include "ParkingLot.h"
 #include "ParkingLotBuilder.h"
-#include "CompactParkingSpot.h"
-#include "HandicappedParkingSpot.h"
-#include "LargeParkingSpot.h"
-#include "MotorcycleParkingSpot.h"
-
-class CompactParkingSpot;
-class HandicappedParkingSpot;
-class LargeParkingSpot;
-class MotorcycleParkingSpot;
+#include "ParkingTicket.h"
 
 int main() {
   std::cout << "This application is a simulation of a parking lot." << std::endl;

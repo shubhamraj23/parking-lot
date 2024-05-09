@@ -6,9 +6,6 @@
 class Terminal;
 
 class ExitTerminal : public Terminal {
-  private:
-
-
   public:
     ExitTerminal();
 };

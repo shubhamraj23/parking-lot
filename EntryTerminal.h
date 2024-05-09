@@ -16,7 +16,6 @@ class EntryTerminal : public Terminal {
 
   public:
     EntryTerminal();
-    SpotAssignmentStrategy* getStrategy();
     void addStrategy(SpotAssignmentStrategy* strategy);
     ParkingTicket* assignSpot(std::string type);
 };

@@ -5,11 +5,8 @@
 class ParkingSpot;
 
 class MotorcycleParkingSpot : public ParkingSpot {
-  private:
-
   public:
     MotorcycleParkingSpot();
-    virtual void blank() override;
 };
 
 #endif

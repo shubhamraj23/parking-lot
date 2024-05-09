@@ -21,13 +21,11 @@ class ParkingLot {
     int numberOfExitTerminals;
     std::vector<EntryTerminal*> entryTerminalsList;
     std::vector<ExitTerminal*> exitTerminalsList;
+    void incrementNumberOfEntryTerminals();
+    void incrementNumberOfExitTerminals();
 
   public:
     ParkingLot();
-    int getNumberOfEntryTerminals();
-    void incrementNumberOfEntryTerminals();
-    int getNumberOfExitTerminals();
-    void incrementNumberOfExitTerminals();
     void addNewEntryTerminal();
     std::vector<EntryTerminal*> getAllEntryTerminals();
     void addNewExitTerminal();

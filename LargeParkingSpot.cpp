@@ -4,7 +4,3 @@ LargeParkingSpot::LargeParkingSpot() {
   this->setParkingSpotId();
   this->setSpotType("large");
 }
-
-void LargeParkingSpot::blank() {
-
-}

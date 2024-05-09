@@ -11,9 +11,7 @@ class SetComparator {
     
   public:
     SetComparator();
-    int getEntranceTerminalId();
     void setEntranceTerminalId(int newId);
-    int getNumberOfEntranceTerminals();
     void setNumberOfEntranceTerminals(int terminals);
     bool operator()(ParkingSpot* a, ParkingSpot* b);
 };

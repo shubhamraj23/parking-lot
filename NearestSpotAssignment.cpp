@@ -4,15 +4,16 @@
 NearestSpotAssignment::NearestSpotAssignment() {}
 
 // Function to create the comparator object.
-void NearestSpotAssignment::createAndSetComparator() {
+void NearestSpotAssignment::createAndSetComparator(int entrances) {
   SetComparator comparator = SetComparator();
+  comparator.setNumberOfEntranceTerminals(entrances);
   this->comparator = comparator;
 }
 
 // Function to initialize the strategy.
 void NearestSpotAssignment::initializeStrategy(int entrances) {
   this->nearestSpotsList.resize(entrances);
-  this->createAndSetComparator();
+  this->createAndSetComparator(entrances);
   for (int i = 0; i < entrances; i++) {
     std::set<ParkingSpot*, SetComparator> newSet(this->comparator);
     this->nearestSpotsList[i] = newSet;

@@ -39,5 +39,9 @@ int main() {
   ParkingTicket* ticket = parkinglot.getAllEntryTerminals()[0]->assignSpot("compact");
   std::cout << ticket->getParkingSpot()->getParkingSpotId() << std::endl;
 
+  int amount = parkinglot.getAllExitTerminals()[0]->getAmount(ticket);
+  std::cout << amount << std::endl;
+  parkinglot.getAllExitTerminals()[0]->freeSpot(ticket, parkinglot.getAllEntryTerminals());
+
   return 0;
 }

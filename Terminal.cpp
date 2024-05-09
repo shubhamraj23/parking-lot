@@ -3,6 +3,9 @@
 // Assigning the static variable counter.
 int Terminal::counter = 0;
 
+// Assigning static variable strategy;
+SpotAssignmentStrategy* Terminal::strategy = NULL;
+
 // Function to increment the counter variable.
 void Terminal::incrementCounter() {
   Terminal::counter++;

@@ -4,11 +4,13 @@
 #include <set>
 #include <string>
 #include <vector>
+#include "EntryTerminal.h"
 #include "ParkingSpot.h"
 #include "ParkingTicket.h"
 #include "SetComparator.h"
 #include "SpotAssignmentStrategy.h"
 
+class EntryTerminal;
 class ParkingSpot;
 class ParkingTicket;
 class SetComparator;

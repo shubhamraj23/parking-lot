@@ -2,7 +2,6 @@
 #define SPOT_ASSIGNMENT_STRATEGY_H
 
 #include <string>
-#include "EntryTerminal.h"
 #include "ParkingTicket.h"
 
 class EntryTerminal;
